@@ -9,7 +9,6 @@ function CrewmateDetail() {
   const [loading, setLoading] = useState(true);
   const [isEditing, setIsEditing] = useState(false);
 
-  // State for editable fields
   const [name, setName] = useState('');
   const [speed, setSpeed] = useState('');
   const [color, setColor] = useState('');
@@ -30,11 +29,11 @@ function CrewmateDetail() {
       setColor(data.color);
     }
     setLoading(false);
-  };
+  }
 
   const handleEditToggle = () => {
     setIsEditing(!isEditing);
-  };
+  }
 
   // Updating the crewmate
   const handleUpdate = async () => {
@@ -45,9 +44,9 @@ function CrewmateDetail() {
     } else {
       alert("Crewmate updated successfully!");
       setIsEditing(false);
-      fetchCrewmate(); // Refresh the details after updating
+      fetchCrewmate();
     }
-  };
+  }
 
   // Deleting the crewmate
   const handleDelete = async () => {
@@ -59,7 +58,7 @@ function CrewmateDetail() {
       alert("Crewmate deleted successfully!");
       navigate('/gallery');
     }
-  };
+  }
 
   if (loading) return <p>Loading crewmate...</p>;
 
@@ -68,7 +67,6 @@ function CrewmateDetail() {
       <h1>Crewmate Details</h1>
       
       {isEditing ? (
-        // Editable Form Section
         <div>
           <h2>Edit Crewmate: {crewmate.name}</h2>
           <div className="form-section">
@@ -111,7 +109,6 @@ function CrewmateDetail() {
           <button onClick={handleEditToggle} className="cancel-button">Cancel</button>
         </div>
       ) : (
-        // View-Only Details Section
         <div>
           <h2>Crewmate: {crewmate.name}</h2>
           <p><strong>Speed:</strong> {crewmate.speed} mph</p>
@@ -121,7 +118,7 @@ function CrewmateDetail() {
         </div>
       )}
     </div>
-  );
+  )
 }
 
 export default CrewmateDetail;
