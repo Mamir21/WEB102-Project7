@@ -4,7 +4,7 @@ Submitted by: **Muhammad Amir**
 
 This web app: **A site to store all your crewmates**
 
-Time spent: **17** hours spent in total
+Time spent: **15** hours spent in total
 
 ## Required Features
 
@@ -31,7 +31,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-
+![Project7](https://github.com/user-attachments/assets/6e07e660-a426-4c50-aaee-e5c3e17be8eb)
 
 GIF created with ...  
 [ScreenToGif](https://www.screentogif.com/) for Windows
